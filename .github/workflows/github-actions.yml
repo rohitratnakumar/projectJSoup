@@ -6,8 +6,9 @@ jobs:
   Fuzzing:
     steps:
     - name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v1
+      uses: aws-actions/configure-aws-credentials@v4
       with:
+        role-skip-session-tagging: true    
         aws-region: eu-north-1
         role-to-assume: arn:aws:iam::713881794521:role/GitActionRole
         role-session-name: OIDCsession
