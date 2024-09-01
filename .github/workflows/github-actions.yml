@@ -1,3 +1,13 @@
 permissions:
   id-token: write
   contents: write
+
+jobs:
+  Fuzzing:
+    steps:
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-region: eu-north-1
+        role-to-assume: arn:aws:iam::765936207681:role/github-iam-role
+        role-session-name: OIDCsession
