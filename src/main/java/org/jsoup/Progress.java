@@ -3,6 +3,9 @@ package org.jsoup;
 @FunctionalInterface
 
 public interface Progress<ProgressContext> {
+
+    /* my code */
+
     /**
      Called to report progress. Note that this will be executed by the same thread that is doing the work, so either
      don't take to long, or hand it off to another thread.
